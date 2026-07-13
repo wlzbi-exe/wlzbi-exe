@@ -81,7 +81,7 @@ I enjoy building useful Telegram bots, automation tools, and clean websites. Mos
 
 <p align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Evilwlzbi&theme=github-dark&hide_border=true"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=wlzbi-exe&theme=github-dark&hide_border=true"/>
 
 </p>
 
