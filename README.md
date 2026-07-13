@@ -77,14 +77,23 @@ I enjoy building useful Telegram bots, automation tools, and clean websites. Mos
 
 ---
 
-## Contribution Graph
+## Pacman Contribution Graph
 
 <p align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=wlzbi-exe&theme=github-dark&hide_border=true"/>
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/pacman-contribution-graph-dark.svg">
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/pacman-contribution-graph.svg">
+  <img
+    alt="Pacman Contribution Graph"
+    src="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/pacman-contribution-graph.svg">
+</picture>
 
 </p>
-
 ---
 
 ## Connect
