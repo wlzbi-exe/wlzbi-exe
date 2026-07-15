@@ -71,7 +71,7 @@ I enjoy building useful Telegram bots, automation tools, and clean websites. Mos
 
 <p align="center">
 
-<img src="https://streak-stats.demolab.com?user=Evilwlzbi&theme=github-dark-blue&hide_border=true"/>
+<img src="https://streak-stats.demolab.com?user=wlzbi-exe&theme=github-dark-blue&hide_border=true"/>
 
 </p>
 
