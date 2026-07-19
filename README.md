@@ -110,7 +110,7 @@ I enjoy building useful Telegram bots, automation tools, and clean websites. Mos
 
 <p align="center">
 
-<img src="https://komarev.com/ghpvc/?username=Evilwlzbi&style=for-the-badge&color=grey"/>
+<img src="https://komarev.com/ghpvc/?username=wlzbi-exe&style=for-the-badge&color=grey"/>
 
 </p>
 
