@@ -64,9 +64,9 @@ I enjoy building useful Telegram bots, automation tools, and clean websites. Mos
 
 <p align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=Evilwlzbi&show_icons=true&hide_border=true&theme=github_dark"/>
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=wlzbi-exe&show_icons=true&hide_border=true&theme=github_dark"/>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Evilwlzbi&layout=compact&hide_border=true&theme=github_dark"/>
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wlzbi-exe&layout=compact&hide_border=true&theme=github_dark"/>
 
 </p>
 
@@ -86,7 +86,6 @@ I enjoy building useful Telegram bots, automation tools, and clean websites. Mos
   <img alt="Pacman contribution graph"
     src="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/pacman-contribution-graph.svg">
 </picture>
-
 
 ## Connect
 
