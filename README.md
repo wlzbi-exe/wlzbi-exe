@@ -23,8 +23,8 @@ class WLZBI:
     ]
 
     pronouns = [
-        "He",
-        "Him"
+        "Assembly",
+        "Binary"
     ]
 
     mode = "Learning Things"
