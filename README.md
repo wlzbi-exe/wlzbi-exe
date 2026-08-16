@@ -9,7 +9,7 @@ class WLZBI:
     location = "Kerala, India"
     age = 16
 
-    roles = [
+    craft = [
         "Telegram Bot Developer",
         "Python Tool Maker",
         "HTML Website Developer"
@@ -27,13 +27,9 @@ class WLZBI:
         "Binary"
     ]
 
-    mode = "Learning Things"
-
-    socials = {
-        "telegram": "@rejerks",
-        "channel": "@Wlzbi",
-        "instagram": "@Wlzbi"
-    }
+    socials = [
+        "telegram": "t.me/rejerks"
+    ]
 ```
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=2500&color=FFFFFF&center=true&vCenter=true&width=700&lines=Building+Telegram+Bots.;Creating+Python+Tools.;Learning+Every+Day.;Coffee+Powered."/>
