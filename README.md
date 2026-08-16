@@ -23,8 +23,8 @@ class WLZBI:
     ]
 
     pronouns = [
-        "Coffee",
-        "Caffeine"
+        "He",
+        "Him"
     ]
 
     mode = "Learning Things"
