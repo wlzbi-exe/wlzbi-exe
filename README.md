@@ -6,30 +6,12 @@
 
 ```python
 class WLZBI:
-    location = "Kerala, India"
-    age = 16
-
-    craft = [
-        "Telegram Bot Developer",
-        "Python Tool Maker",
-        "HTML Website Developer"
-    ]
-
-    languages = [
-        "Python",
-        "HTML",
-        "C++"
-        "JavaScript"
-    ]
-
-    pronouns = [
-        "Assembly",
-        "Binary"
-    ]
-
-    socials = [
-        "telegram": "t.me/rejerks"
-    ]
+    pronouns  = ["Assembly", "Binary"]
+    location  = "Kerala, India"
+    age       = 16
+    craft     = ["Python", "Telegram bots", "tools", "websites"]
+    mode      = "building things"
+    telegram  = "t.me/rejerks"
 ```
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=2500&color=FFFFFF&center=true&vCenter=true&width=700&lines=Building+Telegram+Bots.;Creating+Python+Tools.;Learning+Every+Day.;Coffee+Powered."/>
