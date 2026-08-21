@@ -15,7 +15,6 @@ class WLZBI:
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=2500&color=FFFFFF&center=true&vCenter=true&width=700&lines=Building+Telegram+Bots.;Creating+Python+Tools.;Learning+Every+Day.;Coffee+Powered."/>
 
 </div>
----
 
 ## About Me
 
@@ -23,7 +22,6 @@ I enjoy building useful Telegram bots, automation tools, and clean websites. Mos
 
 > I eat Code.
 
----
 
 ## Tech Stack
 
@@ -33,7 +31,6 @@ I enjoy building useful Telegram bots, automation tools, and clean websites. Mos
 
 </p>
 
----
 
 <p align="center">
 
@@ -49,7 +46,6 @@ I enjoy building useful Telegram bots, automation tools, and clean websites. Mos
 
 </p>
 
----
 
 <picture>
   <source media="(prefers-color-scheme: dark)"
@@ -78,7 +74,6 @@ I enjoy building useful Telegram bots, automation tools, and clean websites. Mos
 
 </p>
 
----
 
 <p align="center">
 
