@@ -3,7 +3,6 @@
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0d1117,100:161b22&text=WLZBI&fontColor=ffffff&fontSize=80&animation=fadeIn&fontAlignY=38&desc=Telegram%20Bot%20Developer%20•%20Python%20Tool%20Maker&descAlignY=60&descColor=b1bac4"/>
 
 # WLZBI
-
 ```python
 class WLZBI:
     pronouns  = ["Assembly", "Binary"]
@@ -13,13 +12,10 @@ class WLZBI:
     mode      = "Eating codes"
     telegram  = "t.me/rejerks"
 ```
-
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=2500&color=FFFFFF&center=true&vCenter=true&width=700&lines=Building+Telegram+Bots.;Creating+Python+Tools.;Learning+Every+Day.;Coffee+Powered."/>
 
 </div>
-
 ---
-
 ## About Me
 
 I enjoy building useful Telegram bots, automation tools, and clean websites. Most of my time goes into experimenting with Python, improving my coding skills, and learning something new every day.
