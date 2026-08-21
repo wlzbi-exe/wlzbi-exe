@@ -60,7 +60,7 @@ I enjoy building useful Telegram bots, automation tools, and clean websites. Mos
 
 <p align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=wlzbi-exe&show_icons=true&hide_border=true&theme=github_dark"/>
+<img height="170" src="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/main/.github/workflows/Wlzbi.jpg?utm_source=chatgpt.com"/>
 
 <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wlzbi-exe&layout=compact&hide_border=true&theme=github_dark"/>
 
