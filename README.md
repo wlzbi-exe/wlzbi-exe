@@ -16,15 +16,6 @@ class WLZBI:
 
 </div>
 
-## About Me
-
-I enjoy building useful Telegram bots, automation tools, and clean websites. Most of my time goes into experimenting with Python, improving my coding skills, and learning something new every day.
-
-> I eat Code.
-
---
-
-
 ## Tech Stack
 
 <p align="center">
