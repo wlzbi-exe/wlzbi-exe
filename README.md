@@ -56,8 +56,6 @@ I enjoy building useful Telegram bots, automation tools, and clean websites. Mos
 
 ---
 
-## GitHub Stats
-
 <p align="center">
 
 <img height="170" src=""/>
