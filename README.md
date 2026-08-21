@@ -9,8 +9,8 @@ class WLZBI:
     pronouns  = ["Assembly", "Binary"]
     location  = "Kerala, India"
     age       = 16
-    craft     = ["Python", "Telegram bots", "tools", "websites"]
-    mode      = "building things"
+    craft     = ["Python tools", "Telegram bots", "websites"]
+    mode      = "Eating codes"
     telegram  = "t.me/rejerks"
 ```
 
