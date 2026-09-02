@@ -42,11 +42,13 @@ class WLZBI:
 
 <picture>
   <source media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/pacman-contribution-graph-dark.svg">
+    srcset="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/snake-dark.svg">
+
   <source media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/pacman-contribution-graph.svg">
-  <img alt="Pacman contribution graph"
-    src="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/pacman-contribution-graph.svg">
+    srcset="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/snake.svg">
+
+  <img alt="Snake contribution graph"
+    src="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/snake.svg">
 </picture>
 
 ## Connect
