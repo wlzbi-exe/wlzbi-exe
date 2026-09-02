@@ -1,4 +1,4 @@
-name: Generate Snake Contribution Graph
+name: Snake Contribution Graph
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate animated Snake SVGs
+      - name: Generate Snake animation
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: wlzbi-exe
@@ -29,10 +29,10 @@ jobs:
           const fs = require("fs");
           const https = require("https");
 
-          const username = process.env.USERNAME;
-          const token = process.env.GH_TOKEN;
+          const USERNAME = process.env.USERNAME;
+          const TOKEN = process.env.GH_TOKEN;
 
-          const query = `
+          const QUERY = `
             query($login:String!) {
               user(login:$login) {
                 contributionsCollection {
@@ -50,11 +50,11 @@ jobs:
             }
           `;
 
-          function graphql() {
+          function github() {
             return new Promise((resolve, reject) => {
               const body = JSON.stringify({
-                query,
-                variables: { login: username }
+                query: QUERY,
+                variables: { login: USERNAME }
               });
 
               const req = https.request({
@@ -62,19 +62,26 @@ jobs:
                 path: "/graphql",
                 method: "POST",
                 headers: {
-                  "User-Agent": "snake-contribution-graph",
-                  "Authorization": `Bearer ${token}`,
+                  "User-Agent": "wlzbi-snake",
+                  "Authorization": `Bearer ${TOKEN}`,
                   "Content-Type": "application/json",
                   "Content-Length": Buffer.byteLength(body)
                 }
               }, res => {
                 let data = "";
 
-                res.on("data", chunk => data += chunk);
+                res.on("data", c => data += c);
 
                 res.on("end", () => {
                   try {
-                    resolve(JSON.parse(data));
+                    const json = JSON.parse(data);
+
+                    if (json.errors) {
+                      reject(new Error(JSON.stringify(json.errors)));
+                      return;
+                    }
+
+                    resolve(json);
                   } catch (e) {
                     reject(e);
                   }
@@ -82,34 +89,130 @@ jobs:
               });
 
               req.on("error", reject);
+
               req.write(body);
               req.end();
             });
           }
 
-          function esc(v) {
-            return String(v)
+          function esc(value) {
+            return String(value)
               .replace(/&/g, "&amp;")
               .replace(/</g, "&lt;")
               .replace(/>/g, "&gt;")
               .replace(/"/g, "&quot;");
           }
 
-          function generate(calendar, dark) {
+          function buildBoard(calendar) {
             const weeks = calendar.weeks;
 
-            const cell = 11;
-            const gap = 4;
-            const step = cell + gap;
+            const board = [];
 
-            const cols = weeks.length;
+            let maximum = 0;
+
+            for (const week of weeks) {
+              for (const day of week.contributionDays) {
+                maximum = Math.max(
+                  maximum,
+                  day.contributionCount
+                );
+              }
+            }
+
+            for (let x = 0; x < weeks.length; x++) {
+              for (const day of weeks[x].contributionDays) {
+                let level = 0;
+
+                if (day.contributionCount > 0)
+                  level = 1;
+
+                if (
+                  maximum > 0 &&
+                  day.contributionCount >= maximum * 0.25
+                )
+                  level = 2;
+
+                if (
+                  maximum > 0 &&
+                  day.contributionCount >= maximum * 0.50
+                )
+                  level = 3;
+
+                if (
+                  maximum > 0 &&
+                  day.contributionCount >= maximum * 0.75
+                )
+                  level = 4;
+
+                board.push({
+                  x,
+                  y: day.weekday,
+                  level,
+                  count: day.contributionCount,
+                  date: day.date
+                });
+              }
+            }
+
+            return {
+              weeks,
+              cells: board
+            };
+          }
+
+          /*
+           * Deterministic pseudo-random generator.
+           *
+           * This means the animation is stable for the same
+           * contribution calendar, but still feels random.
+           */
+          function RNG(seed) {
+            let value = seed >>> 0;
+
+            return () => {
+              value += 0x6D2B79F5;
+
+              let t = value;
+
+              t = Math.imul(
+                t ^ (t >>> 15),
+                t | 1
+              );
+
+              t ^= t + Math.imul(
+                t ^ (t >>> 7),
+                t | 61
+              );
+
+              return (
+                ((t ^ (t >>> 14)) >>> 0)
+                / 4294967296
+              );
+            };
+          }
+
+          function generateGame(calendar, dark) {
+
+            const random = RNG(
+              USERNAME.length * 7919 +
+              calendar.weeks.length * 104729
+            );
+
+            const CELL = 12;
+            const GAP = 3;
+            const STEP = CELL + GAP;
+
+            const cols = calendar.weeks.length;
             const rows = 7;
 
-            const width = cols * step + 60;
-            const height = rows * step + 70;
+            const width =
+              cols * STEP + 60;
+
+            const height =
+              rows * STEP + 80;
 
             const ox = 30;
-            const oy = 35;
+            const oy = 38;
 
             const colors = dark
               ? [
@@ -127,198 +230,575 @@ jobs:
                   "#216e39"
                 ];
 
-            const cells = [];
+            const cellMap = new Map();
+
+            for (const cell of calendar.cells) {
+              cellMap.set(
+                `${cell.x}:${cell.y}`,
+                cell
+              );
+            }
+
+            /*
+             * Background contribution cells.
+             */
+            let background = "";
 
             for (let x = 0; x < cols; x++) {
               for (let y = 0; y < rows; y++) {
 
-                const day =
-                  weeks[x].contributionDays.find(
-                    d => d.weekday === y
-                  );
+                const cell =
+                  cellMap.get(`${x}:${y}`);
 
-                const count = day ? day.contributionCount : 0;
+                const level =
+                  cell ? cell.level : 0;
 
-                let level = 0;
+                const px =
+                  ox + x * STEP;
 
-                if (count > 0) level = 1;
-                if (count >= 3) level = 2;
-                if (count >= 6) level = 3;
-                if (count >= 10) level = 4;
+                const py =
+                  oy + y * STEP;
 
-                cells.push(`
+                background += `
                   <rect
-                    x="${ox + x * step}"
-                    y="${oy + y * step}"
-                    width="${cell}"
-                    height="${cell}"
-                    rx="2.5"
+                    x="${px}"
+                    y="${py}"
+                    width="${CELL}"
+                    height="${CELL}"
+                    rx="3"
                     fill="${colors[level]}"
-                  >
-                    <animate
-                      attributeName="opacity"
-                      values="0.82;1;0.82"
-                      dur="${2 + ((x + y) % 5) * .3}s"
-                      repeatCount="indefinite"
-                    />
-                  </rect>
-                `);
+                  />
+                `;
               }
             }
 
             /*
-             * Build a long serpentine route through the calendar.
+             * Create several independent gameplay runs.
+             *
+             * Each run has:
+             *
+             * MOVE
+             * EAT
+             * GROW
+             * TURN
+             * SELF COLLISION
+             * DEATH
+             * RESPAWN
              */
-            const route = [];
+            const RUNS = 4;
 
-            for (let x = 0; x < cols; x++) {
-              const ys =
-                x % 2 === 0
-                  ? [...Array(rows).keys()]
-                  : [...Array(rows).keys()].reverse();
+            const totalDuration = 48;
 
-              for (const y of ys) {
-                route.push({
-                  x: ox + x * step + cell / 2,
-                  y: oy + y * step + cell / 2
+            let defs = "";
+            let gameplay = "";
+
+            for (let run = 0; run < RUNS; run++) {
+
+              const startX =
+                2 +
+                Math.floor(
+                  random() * Math.max(1, cols - 5)
+                );
+
+              const startY =
+                1 +
+                Math.floor(
+                  random() * 5
+                );
+
+              let direction =
+                random() > 0.5
+                  ? 1
+                  : -1;
+
+              let snake = [];
+
+              for (let i = 0; i < 7; i++) {
+                snake.push({
+                  x: startX - i * direction,
+                  y: startY
                 });
               }
-            }
 
-            const points = route
-              .map(p => `${p.x},${p.y}`)
-              .join(" ");
+              const foods = [];
 
-            const path =
-              route.length
-                ? `M ${route.map(
-                    p => `${p.x} ${p.y}`
-                  ).join(" L ")}`
-                : "M 0 0";
+              /*
+               * Select contribution cells as food.
+               */
+              const candidates =
+                calendar.cells
+                  .filter(c => c.level > 0)
+                  .sort(
+                    (a, b) =>
+                      b.level - a.level
+                  );
 
-            /*
-             * Multiple animated body segments.
-             */
-            let body = "";
+              for (
+                let i = 0;
+                i < Math.min(10, candidates.length);
+                i++
+              ) {
+                foods.push(
+                  candidates[
+                    Math.floor(
+                      random() * candidates.length
+                    )
+                  ]
+                );
+              }
 
-            const segments = 12;
+              /*
+               * Construct a believable path.
+               */
+              const moves = [];
 
-            for (let i = 0; i < segments; i++) {
-              const delay = -(i * 0.16);
+              let x = startX;
+              let y = startY;
 
-              body += `
-                <circle
-                  r="${5.8 - i * 0.22}"
-                  fill="${dark ? "#39d353" : "#216e39"}"
-                  opacity="${1 - i * 0.055}"
-                >
-                  <animateMotion
-                    dur="28s"
-                    begin="${delay}s"
-                    repeatCount="indefinite"
-                    rotate="auto"
-                    path="${esc(path)}"
-                  />
-                </circle>
+              let dirX = direction;
+              let dirY = 0;
+
+              const STEPS = 42;
+
+              for (let step = 0; step < STEPS; step++) {
+
+                /*
+                 * Occasionally turn.
+                 */
+                if (random() < 0.22) {
+
+                  if (dirX !== 0) {
+                    dirX = 0;
+                    dirY =
+                      random() > 0.5
+                        ? 1
+                        : -1;
+                  } else {
+                    dirY = 0;
+                    dirX =
+                      random() > 0.5
+                        ? 1
+                        : -1;
+                  }
+                }
+
+                let nx = x + dirX;
+                let ny = y + dirY;
+
+                /*
+                 * Bounce from board boundaries.
+                 */
+                if (
+                  nx < 0 ||
+                  nx >= cols
+                ) {
+                  dirX *= -1;
+                  dirY = 0;
+                  nx = x + dirX;
+                }
+
+                if (
+                  ny < 0 ||
+                  ny >= rows
+                ) {
+                  dirY *= -1;
+                  dirX = 0;
+                  ny = y + dirY;
+                }
+
+                x = nx;
+                y = ny;
+
+                moves.push({ x, y });
+              }
+
+              /*
+               * Force a self-bite near the end of the run.
+               */
+              const biteStart =
+                Math.max(
+                  12,
+                  moves.length - 8
+                );
+
+              if (snake.length > 5) {
+
+                for (
+                  let i = biteStart;
+                  i < moves.length;
+                  i++
+                ) {
+                  const target =
+                    snake[
+                      Math.min(
+                        snake.length - 1,
+                        i - biteStart + 2
+                      )
+                    ];
+
+                  if (target) {
+                    moves[i] = {
+                      x: target.x,
+                      y: target.y
+                    };
+                  }
+                }
+              }
+
+              const runStart =
+                run * (totalDuration / RUNS);
+
+              const runDuration =
+                totalDuration / RUNS;
+
+              /*
+               * Snake animation path.
+               */
+              const headPoints = [];
+
+              for (const p of moves) {
+
+                headPoints.push(
+                  `${ox + p.x * STEP + CELL / 2},` +
+                  `${oy + p.y * STEP + CELL / 2}`
+                );
+              }
+
+              const pathData =
+                headPoints.length
+                  ? `M ${headPoints.join(" L ")}`
+                  : "M 0 0";
+
+              const snakeId =
+                `snake-${run}`;
+
+              defs += `
+                <path
+                  id="${snakeId}"
+                  d="${pathData}"
+                />
+              `;
+
+              /*
+               * Connected body.
+               *
+               * Every segment follows the SAME path with
+               * a progressively larger negative delay.
+               */
+              let body = "";
+
+              const SEGMENTS = 14;
+
+              for (
+                let segment = SEGMENTS - 1;
+                segment >= 0;
+                segment--
+              ) {
+
+                const radius =
+                  Math.max(
+                    3.2,
+                    6.8 - segment * 0.20
+                  );
+
+                const delay =
+                  -(segment * 0.13);
+
+                body += `
+                  <circle
+                    r="${radius}"
+                    fill="${dark
+                      ? "#26a641"
+                      : "#238636"}"
+                    opacity="${Math.max(
+                      0.38,
+                      1 - segment * 0.045
+                    )}"
+                  >
+                    <animateMotion
+                      dur="${runDuration}s"
+                      begin="${runStart + delay}s"
+                      repeatCount="indefinite"
+                      rotate="auto"
+                    >
+                      <mpath href="#${snakeId}"/>
+                    </animateMotion>
+                  </circle>
+                `;
+              }
+
+              /*
+               * Head.
+               */
+              const head = `
+                <g>
+
+                  <circle
+                    r="7.2"
+                    fill="${dark
+                      ? "#39d353"
+                      : "#216e39"}"
+                    filter="url(#glow)"
+                  >
+                    <animateMotion
+                      dur="${runDuration}s"
+                      begin="${runStart}s"
+                      repeatCount="indefinite"
+                      rotate="auto"
+                    >
+                      <mpath href="#${snakeId}"/>
+                    </animateMotion>
+                  </circle>
+
+                  <!-- left eye -->
+
+                  <circle
+                    cx="-2.6"
+                    cy="-2.5"
+                    r="1.35"
+                    fill="white"
+                  >
+                    <animateMotion
+                      dur="${runDuration}s"
+                      begin="${runStart}s"
+                      repeatCount="indefinite"
+                      rotate="auto"
+                    >
+                      <mpath href="#${snakeId}"/>
+                    </animateMotion>
+                  </circle>
+
+                  <!-- right eye -->
+
+                  <circle
+                    cx="2.6"
+                    cy="-2.5"
+                    r="1.35"
+                    fill="white"
+                  >
+                    <animateMotion
+                      dur="${runDuration}s"
+                      begin="${runStart}s"
+                      repeatCount="indefinite"
+                      rotate="auto"
+                    >
+                      <mpath href="#${snakeId}"/>
+                    </animateMotion>
+                  </circle>
+
+                </g>
+              `;
+
+              /*
+               * Food.
+               *
+               * Food pulses and then shrinks when the Snake
+               * reaches its position.
+               */
+              let food = "";
+
+              foods.forEach((foodCell, foodIndex) => {
+
+                const fx =
+                  ox +
+                  foodCell.x * STEP +
+                  CELL / 2;
+
+                const fy =
+                  oy +
+                  foodCell.y * STEP +
+                  CELL / 2;
+
+                const eatTime =
+                  runStart +
+                  1.5 +
+                  foodIndex * 0.65;
+
+                food += `
+                  <g>
+
+                    <circle
+                      cx="${fx}"
+                      cy="${fy}"
+                      r="3.8"
+                      fill="${dark
+                        ? "#ff6b6b"
+                        : "#cf222e"}"
+                    >
+
+                      <animate
+                        attributeName="r"
+                        values="3;4.5;3"
+                        dur="1s"
+                        repeatCount="indefinite"
+                      />
+
+                      <animate
+                        attributeName="opacity"
+                        values="1;.45;1"
+                        dur="1s"
+                        repeatCount="indefinite"
+                      />
+
+                    </circle>
+
+                    <circle
+                      cx="${fx}"
+                      cy="${fy}"
+                      r="7"
+                      fill="none"
+                      stroke="${dark
+                        ? "#ff6b6b"
+                        : "#cf222e"}"
+                      opacity=".25"
+                    >
+
+                      <animate
+                        attributeName="r"
+                        values="4;9;4"
+                        dur="1.2s"
+                        repeatCount="indefinite"
+                      />
+
+                      <animate
+                        attributeName="opacity"
+                        values=".4;0;.4"
+                        dur="1.2s"
+                        repeatCount="indefinite"
+                      />
+
+                    </circle>
+
+                    <!-- bite effect -->
+
+                    <circle
+                      cx="${fx}"
+                      cy="${fy}"
+                      r="2"
+                      fill="white"
+                    >
+
+                      <animate
+                        attributeName="r"
+                        begin="${eatTime}s"
+                        dur=".35s"
+                        values="2;11;0"
+                        repeatCount="indefinite"
+                      />
+
+                      <animate
+                        attributeName="opacity"
+                        begin="${eatTime}s"
+                        dur=".35s"
+                        values="1;.8;0"
+                        repeatCount="indefinite"
+                      />
+
+                    </circle>
+
+                  </g>
+                `;
+              });
+
+              /*
+               * Death explosion.
+               */
+              const deathTime =
+                runStart +
+                runDuration -
+                1.7;
+
+              const deathX =
+                ox +
+                moves[moves.length - 1].x *
+                  STEP +
+                CELL / 2;
+
+              const deathY =
+                oy +
+                moves[moves.length - 1].y *
+                  STEP +
+                CELL / 2;
+
+              const explosion = `
+                <g>
+
+                  <circle
+                    cx="${deathX}"
+                    cy="${deathY}"
+                    r="4"
+                    fill="${dark
+                      ? "#ff5555"
+                      : "#cf222e"}"
+                  >
+
+                    <animate
+                      attributeName="r"
+                      begin="${deathTime}s"
+                      dur="1.2s"
+                      values="4;22;2"
+                      repeatCount="indefinite"
+                    />
+
+                    <animate
+                      attributeName="opacity"
+                      begin="${deathTime}s"
+                      dur="1.2s"
+                      values="1;.25;0"
+                      repeatCount="indefinite"
+                    />
+
+                  </circle>
+
+                  <text
+                    x="${deathX}"
+                    y="${deathY}"
+                    text-anchor="middle"
+                    font-size="10"
+                    font-family="sans-serif"
+                    font-weight="bold"
+                    fill="${dark
+                      ? "#ff6b6b"
+                      : "#cf222e"}"
+                    opacity="0"
+                  >
+                    💥
+                    <animate
+                      attributeName="opacity"
+                      begin="${deathTime}s"
+                      dur=".25s"
+                      values="0;1;0"
+                      repeatCount="indefinite"
+                    />
+                  </text>
+
+                </g>
+              `;
+
+              gameplay += `
+                <g>
+                  ${food}
+                  ${body}
+                  ${head}
+                  ${explosion}
+                </g>
               `;
             }
-
-            /*
-             * Snake head.
-             */
-            const head = `
-              <g>
-
-                <circle
-                  r="7"
-                  fill="${dark ? "#58ff78" : "#238636"}"
-                >
-                  <animateMotion
-                    dur="28s"
-                    repeatCount="indefinite"
-                    rotate="auto"
-                    path="${esc(path)}"
-                  />
-                </circle>
-
-                <!-- eyes -->
-
-                <circle
-                  cx="-2.2"
-                  cy="-2.5"
-                  r="1.25"
-                  fill="${dark ? "#ffffff" : "#ffffff"}"
-                >
-                  <animateMotion
-                    dur="28s"
-                    repeatCount="indefinite"
-                    rotate="auto"
-                    path="${esc(path)}"
-                  />
-                </circle>
-
-                <circle
-                  cx="2.2"
-                  cy="-2.5"
-                  r="1.25"
-                  fill="${dark ? "#ffffff" : "#ffffff"}"
-                >
-                  <animateMotion
-                    dur="28s"
-                    repeatCount="indefinite"
-                    rotate="auto"
-                    path="${esc(path)}"
-                  />
-                </circle>
-
-              </g>
-            `;
-
-            /*
-             * Food markers.
-             */
-            const foodPositions = route.filter(
-              (_, i) => i % 23 === 7
-            );
-
-            let food = "";
-
-            foodPositions.forEach((p, i) => {
-              food += `
-                <circle
-                  cx="${p.x}"
-                  cy="${p.y}"
-                  r="3.5"
-                  fill="${dark ? "#ff6b6b" : "#cf222e"}"
-                >
-                  <animate
-                    attributeName="r"
-                    values="3;4.5;3"
-                    dur="1s"
-                    repeatCount="indefinite"
-                  />
-
-                  <animate
-                    attributeName="opacity"
-                    values="1;.35;1"
-                    dur="1s"
-                    repeatCount="indefinite"
-                  />
-                </circle>
-              `;
-            });
 
             return `<?xml version="1.0" encoding="UTF-8"?>
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="${width}"
             height="${height}"
             viewBox="0 0 ${width} ${height}"
             role="img"
-            aria-label="Snake contribution graph for ${esc(username)}"
+            aria-label="Animated Snake contribution graph for ${esc(USERNAME)}"
           >
 
             <defs>
+
+              ${defs}
 
               <filter
                 id="glow"
@@ -327,8 +807,9 @@ jobs:
                 width="300%"
                 height="300%"
               >
+
                 <feGaussianBlur
-                  stdDeviation="3"
+                  stdDeviation="2.2"
                   result="blur"
                 />
 
@@ -336,23 +817,8 @@ jobs:
                   <feMergeNode in="blur"/>
                   <feMergeNode in="SourceGraphic"/>
                 </feMerge>
+
               </filter>
-
-              <linearGradient
-                id="snakeGradient"
-                x1="0"
-                x2="1"
-              >
-                <stop
-                  offset="0%"
-                  stop-color="${dark ? "#0e4429" : "#9be9a8"}"
-                />
-
-                <stop
-                  offset="100%"
-                  stop-color="${dark ? "#39d353" : "#216e39"}"
-                />
-              </linearGradient>
 
             </defs>
 
@@ -360,111 +826,85 @@ jobs:
               width="100%"
               height="100%"
               rx="12"
-              fill="${dark ? "#0d1117" : "#ffffff"}"
+              fill="${dark
+                ? "#0d1117"
+                : "#ffffff"}"
             />
 
+            <text
+              x="${width / 2}"
+              y="20"
+              text-anchor="middle"
+              font-family="sans-serif"
+              font-size="11"
+              font-weight="600"
+              fill="${dark
+                ? "#8b949e"
+                : "#57606a"}"
+            >
+              🐍 ${esc(USERNAME)} · contribution snake
+            </text>
+
+            <!-- contribution grid -->
+
             <g>
-              ${cells.join("")}
+              ${background}
             </g>
 
-            <!-- Food -->
+            <!-- gameplay -->
 
             <g>
-              ${food}
+              ${gameplay}
             </g>
-
-            <!-- Snake shadow -->
-
-            <polyline
-              points="${points}"
-              fill="none"
-              stroke="${dark ? "#39d353" : "#216e39"}"
-              stroke-width="12"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              opacity=".10"
-              stroke-dasharray="1 34"
-            >
-              <animate
-                attributeName="stroke-dashoffset"
-                from="0"
-                to="-2500"
-                dur="28s"
-                repeatCount="indefinite"
-              />
-            </polyline>
-
-            <!-- Snake -->
-
-            <g
-              filter="url(#glow)"
-              stroke-linecap="round"
-            >
-              ${body}
-              ${head}
-            </g>
-
-            <!-- subtle scan animation -->
-
-            <rect
-              x="${ox}"
-              y="${oy}"
-              width="${cols * step}"
-              height="${rows * step}"
-              fill="none"
-              stroke="${dark ? "#39d353" : "#216e39"}"
-              stroke-width="1"
-              opacity=".08"
-            >
-              <animate
-                attributeName="opacity"
-                values=".02;.12;.02"
-                dur="4s"
-                repeatCount="indefinite"
-              />
-            </rect>
 
           </svg>`;
           }
 
           (async () => {
 
-            const result = await graphql();
+            console.log(
+              `🐍 Generating Snake graph for @${USERNAME}`
+            );
 
-            if (
-              !result.data ||
-              !result.data.user ||
-              !result.data.user.contributionsCollection
-            ) {
-              throw new Error(
-                "Could not retrieve GitHub contribution data."
-              );
-            }
+            const response = await github();
 
             const calendar =
-              result.data.user
+              response.data.user
                 .contributionsCollection
                 .contributionCalendar;
 
             fs.writeFileSync(
               "dist/snake.svg",
-              generate(calendar, false)
+              generateGame(calendar, false)
             );
 
             fs.writeFileSync(
               "dist/snake-dark.svg",
-              generate(calendar, true)
+              generateGame(calendar, true)
             );
 
-            console.log("🐍 Snake SVGs generated successfully.");
+            console.log(
+              "✅ Generated snake.svg"
+            );
 
-          })().catch(err => {
-            console.error(err);
+            console.log(
+              "✅ Generated snake-dark.svg"
+            );
+
+          })().catch(error => {
+
+            console.error(
+              "❌ Snake generation failed:"
+            );
+
+            console.error(error);
+
             process.exit(1);
           });
+
           NODE
 
-      - name: Publish generated SVGs
+      - name: Publish Snake SVGs
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
