@@ -27,9 +27,6 @@ class WLZBI:
 
 <p align="center">
 
-<img height="170" src=""/>
-
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wlzbi-exe&layout=compact&hide_border=true&theme=github_dark"/>
 
 </p>
 
@@ -39,17 +36,6 @@ class WLZBI:
 
 </p>
 
-
-<picture>
-  <source media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/snake-dark.svg">
-
-  <source media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/snake.svg">
-
-  <img alt="Snake contribution graph"
-    src="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/output/snake.svg">
-</picture>
 
 ## Connect
 
