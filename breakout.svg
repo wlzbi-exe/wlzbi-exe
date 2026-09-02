@@ -1,0 +1,10052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="875"
+  height="225"
+  viewBox="0 0 875 225"
+  role="img"
+  aria-label="Animated Breakout contribution graph for wlzbi-exe"
+>
+
+  <defs>
+
+    <path
+      id="ballPath"
+      d="
+    M 493.15 94.1
+
+    L 820 62
+
+    L 805 143
+
+    L 160 72
+
+    L 55 139
+
+    L 760 62
+
+    L 825 130
+
+    L 90 65
+
+    L 55 143
+
+    L 820 70
+
+    L 765 145
+
+    L 130 60
+
+    L 60 140
+
+    L 815 65
+
+    L 795 145
+
+    L 90 65
+
+    L 55 140
+
+    L 820 70
+
+    L 775 140
+
+    L 150 65
+
+    L 65 135
+
+    L 815 70
+  "
+    />
+
+    <filter
+      id="blur"
+      x="-100%"
+      y="-100%"
+      width="300%"
+      height="300%"
+    >
+
+      <feGaussianBlur
+        stdDeviation="3"
+      />
+
+    </filter>
+
+  </defs>
+
+  <!-- background -->
+
+  <rect
+    width="100%"
+    height="100%"
+    rx="12"
+    fill="#ffffff"
+  />
+
+  
+    <text
+      x="40"
+      y="23"
+      font-family="monospace"
+      font-size="11"
+      font-weight="700"
+      fill="#57606a"
+    >
+      SCORE
+    </text>
+
+    <text
+      x="83"
+      y="23"
+      font-family="monospace"
+      font-size="11"
+      font-weight="700"
+      fill="#216e39"
+    >
+      <tspan>000</tspan>
+
+      <animate
+        attributeName="opacity"
+        values="1;.4;1"
+        dur="1.2s"
+        repeatCount="indefinite"
+      />
+    </text>
+  
+
+  
+    <text
+      x="735"
+      y="23"
+      font-family="monospace"
+      font-size="11"
+      font-weight="700"
+      fill="#57606a"
+    >
+      LIVES
+    </text>
+
+    <text
+      x="780"
+      y="23"
+      font-size="10"
+    >
+      ♥ ♥ ♥
+    </text>
+  
+
+  <!-- contribution bricks -->
+
+  <g>
+    
+        <g id="brick-0-0">
+
+          <rect
+            x="40"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="41"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-0-1">
+
+          <rect
+            x="40"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="41"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-0-2">
+
+          <rect
+            x="40"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="41"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-0-3">
+
+          <rect
+            x="40"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="41"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-0-4">
+
+          <rect
+            x="40"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="41"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-0-5">
+
+          <rect
+            x="40"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="41"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-0-6">
+
+          <rect
+            x="40"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="41"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-1-0">
+
+          <rect
+            x="55"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="56"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-1-1">
+
+          <rect
+            x="55"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="56"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-1-2">
+
+          <rect
+            x="55"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="56"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-1-3">
+
+          <rect
+            x="55"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="56"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-1-4">
+
+          <rect
+            x="55"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="56"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-1-5">
+
+          <rect
+            x="55"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="56"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-1-6">
+
+          <rect
+            x="55"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="56"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-2-0">
+
+          <rect
+            x="70"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="71"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-2-1">
+
+          <rect
+            x="70"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="71"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-2-2">
+
+          <rect
+            x="70"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="71"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-2-3">
+
+          <rect
+            x="70"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="71"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-2-4">
+
+          <rect
+            x="70"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="71"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-2-5">
+
+          <rect
+            x="70"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="71"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-2-6">
+
+          <rect
+            x="70"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="71"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-3-0">
+
+          <rect
+            x="85"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="86"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-3-1">
+
+          <rect
+            x="85"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="86"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-3-2">
+
+          <rect
+            x="85"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="86"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-3-3">
+
+          <rect
+            x="85"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="86"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-3-4">
+
+          <rect
+            x="85"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="86"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-3-5">
+
+          <rect
+            x="85"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="86"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-3-6">
+
+          <rect
+            x="85"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="86"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-4-0">
+
+          <rect
+            x="100"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="101"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-4-1">
+
+          <rect
+            x="100"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="101"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-4-2">
+
+          <rect
+            x="100"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="101"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-4-3">
+
+          <rect
+            x="100"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="101"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-4-4">
+
+          <rect
+            x="100"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="101"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-4-5">
+
+          <rect
+            x="100"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="101"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-4-6">
+
+          <rect
+            x="100"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="101"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-5-0">
+
+          <rect
+            x="115"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="116"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-5-1">
+
+          <rect
+            x="115"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="116"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-5-2">
+
+          <rect
+            x="115"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="116"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-5-3">
+
+          <rect
+            x="115"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="116"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-5-4">
+
+          <rect
+            x="115"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="116"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-5-5">
+
+          <rect
+            x="115"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="116"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-5-6">
+
+          <rect
+            x="115"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="116"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-6-0">
+
+          <rect
+            x="130"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="131"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-6-1">
+
+          <rect
+            x="130"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="131"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-6-2">
+
+          <rect
+            x="130"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="131"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-6-3">
+
+          <rect
+            x="130"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="131"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-6-4">
+
+          <rect
+            x="130"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="131"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-6-5">
+
+          <rect
+            x="130"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="131"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-6-6">
+
+          <rect
+            x="130"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="131"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-7-0">
+
+          <rect
+            x="145"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="146"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-7-1">
+
+          <rect
+            x="145"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="146"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-7-2">
+
+          <rect
+            x="145"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="146"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-7-3">
+
+          <rect
+            x="145"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="146"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-7-4">
+
+          <rect
+            x="145"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="146"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-7-5">
+
+          <rect
+            x="145"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="146"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-7-6">
+
+          <rect
+            x="145"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="146"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-8-0">
+
+          <rect
+            x="160"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="161"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-8-1">
+
+          <rect
+            x="160"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="161"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-8-2">
+
+          <rect
+            x="160"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="161"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-8-3">
+
+          <rect
+            x="160"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="161"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-8-4">
+
+          <rect
+            x="160"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="161"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-8-5">
+
+          <rect
+            x="160"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="161"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-8-6">
+
+          <rect
+            x="160"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="161"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-9-0">
+
+          <rect
+            x="175"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="176"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-9-1">
+
+          <rect
+            x="175"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="176"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-9-2">
+
+          <rect
+            x="175"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="176"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-9-3">
+
+          <rect
+            x="175"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="176"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-9-4">
+
+          <rect
+            x="175"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="176"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-9-5">
+
+          <rect
+            x="175"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="176"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-9-6">
+
+          <rect
+            x="175"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="176"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-10-0">
+
+          <rect
+            x="190"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="191"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-10-1">
+
+          <rect
+            x="190"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="191"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-10-2">
+
+          <rect
+            x="190"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="191"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-10-3">
+
+          <rect
+            x="190"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="191"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-10-4">
+
+          <rect
+            x="190"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="191"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-10-5">
+
+          <rect
+            x="190"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="191"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-10-6">
+
+          <rect
+            x="190"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="191"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-11-0">
+
+          <rect
+            x="205"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="206"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-11-1">
+
+          <rect
+            x="205"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="206"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-11-2">
+
+          <rect
+            x="205"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="206"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-11-3">
+
+          <rect
+            x="205"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="206"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-11-4">
+
+          <rect
+            x="205"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="206"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-11-5">
+
+          <rect
+            x="205"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="206"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-11-6">
+
+          <rect
+            x="205"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="206"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-12-0">
+
+          <rect
+            x="220"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="221"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-12-1">
+
+          <rect
+            x="220"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="221"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-12-2">
+
+          <rect
+            x="220"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="221"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-12-3">
+
+          <rect
+            x="220"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="221"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-12-4">
+
+          <rect
+            x="220"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="221"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-12-5">
+
+          <rect
+            x="220"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="221"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-12-6">
+
+          <rect
+            x="220"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="221"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-13-0">
+
+          <rect
+            x="235"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="236"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-13-1">
+
+          <rect
+            x="235"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="236"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-13-2">
+
+          <rect
+            x="235"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="236"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-13-3">
+
+          <rect
+            x="235"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="236"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-13-4">
+
+          <rect
+            x="235"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="236"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-13-5">
+
+          <rect
+            x="235"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="236"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-13-6">
+
+          <rect
+            x="235"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="236"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-14-0">
+
+          <rect
+            x="250"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="251"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-14-1">
+
+          <rect
+            x="250"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="251"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-14-2">
+
+          <rect
+            x="250"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="251"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-14-3">
+
+          <rect
+            x="250"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="251"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-14-4">
+
+          <rect
+            x="250"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="251"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-14-5">
+
+          <rect
+            x="250"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="251"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-14-6">
+
+          <rect
+            x="250"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="251"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-15-0">
+
+          <rect
+            x="265"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="266"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-15-1">
+
+          <rect
+            x="265"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="266"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-15-2">
+
+          <rect
+            x="265"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="266"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-15-3">
+
+          <rect
+            x="265"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="266"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-15-4">
+
+          <rect
+            x="265"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="266"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-15-5">
+
+          <rect
+            x="265"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="266"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-15-6">
+
+          <rect
+            x="265"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="266"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-16-0">
+
+          <rect
+            x="280"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="281"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-16-1">
+
+          <rect
+            x="280"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="281"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-16-2">
+
+          <rect
+            x="280"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="281"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-16-3">
+
+          <rect
+            x="280"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="281"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-16-4">
+
+          <rect
+            x="280"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="281"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-16-5">
+
+          <rect
+            x="280"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="281"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-16-6">
+
+          <rect
+            x="280"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="281"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-17-0">
+
+          <rect
+            x="295"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="296"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-17-1">
+
+          <rect
+            x="295"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="296"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-17-2">
+
+          <rect
+            x="295"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="296"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-17-3">
+
+          <rect
+            x="295"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="296"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-17-4">
+
+          <rect
+            x="295"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="296"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-17-5">
+
+          <rect
+            x="295"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="296"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-17-6">
+
+          <rect
+            x="295"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="296"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-18-0">
+
+          <rect
+            x="310"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="311"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-18-1">
+
+          <rect
+            x="310"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="311"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-18-2">
+
+          <rect
+            x="310"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="311"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-18-3">
+
+          <rect
+            x="310"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="311"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-18-4">
+
+          <rect
+            x="310"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="311"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-18-5">
+
+          <rect
+            x="310"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="311"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-18-6">
+
+          <rect
+            x="310"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="311"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-19-0">
+
+          <rect
+            x="325"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="326"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-19-1">
+
+          <rect
+            x="325"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="326"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-19-2">
+
+          <rect
+            x="325"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="326"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-19-3">
+
+          <rect
+            x="325"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="326"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-19-4">
+
+          <rect
+            x="325"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="326"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-19-5">
+
+          <rect
+            x="325"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="326"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-19-6">
+
+          <rect
+            x="325"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="326"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-20-0">
+
+          <rect
+            x="340"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="341"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-20-1">
+
+          <rect
+            x="340"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="341"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-20-2">
+
+          <rect
+            x="340"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="341"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-20-3">
+
+          <rect
+            x="340"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="341"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-20-4">
+
+          <rect
+            x="340"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="341"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-20-5">
+
+          <rect
+            x="340"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="341"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-20-6">
+
+          <rect
+            x="340"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="341"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-21-0">
+
+          <rect
+            x="355"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="356"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-21-1">
+
+          <rect
+            x="355"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="356"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-21-2">
+
+          <rect
+            x="355"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="356"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-21-3">
+
+          <rect
+            x="355"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="356"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-21-4">
+
+          <rect
+            x="355"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="356"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-21-5">
+
+          <rect
+            x="355"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="356"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-21-6">
+
+          <rect
+            x="355"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="356"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-22-0">
+
+          <rect
+            x="370"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="371"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-22-1">
+
+          <rect
+            x="370"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="371"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-22-2">
+
+          <rect
+            x="370"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="371"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-22-3">
+
+          <rect
+            x="370"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="371"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-22-4">
+
+          <rect
+            x="370"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="371"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-22-5">
+
+          <rect
+            x="370"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="371"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-22-6">
+
+          <rect
+            x="370"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="371"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-23-0">
+
+          <rect
+            x="385"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="386"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-23-1">
+
+          <rect
+            x="385"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="386"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-23-2">
+
+          <rect
+            x="385"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="386"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-23-3">
+
+          <rect
+            x="385"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="386"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-23-4">
+
+          <rect
+            x="385"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="386"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-23-5">
+
+          <rect
+            x="385"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="386"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-23-6">
+
+          <rect
+            x="385"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="386"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-24-0">
+
+          <rect
+            x="400"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="401"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-24-1">
+
+          <rect
+            x="400"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="401"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-24-2">
+
+          <rect
+            x="400"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="401"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-24-3">
+
+          <rect
+            x="400"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="401"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-24-4">
+
+          <rect
+            x="400"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="401"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-24-5">
+
+          <rect
+            x="400"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="401"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-24-6">
+
+          <rect
+            x="400"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="401"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-25-0">
+
+          <rect
+            x="415"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="416"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-25-1">
+
+          <rect
+            x="415"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="416"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-25-2">
+
+          <rect
+            x="415"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="416"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-25-3">
+
+          <rect
+            x="415"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="416"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-25-4">
+
+          <rect
+            x="415"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="416"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-25-5">
+
+          <rect
+            x="415"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="416"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-25-6">
+
+          <rect
+            x="415"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="416"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-26-0">
+
+          <rect
+            x="430"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="431"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-26-1">
+
+          <rect
+            x="430"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="431"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-26-2">
+
+          <rect
+            x="430"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="431"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-26-3">
+
+          <rect
+            x="430"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="431"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-26-4">
+
+          <rect
+            x="430"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="431"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-26-5">
+
+          <rect
+            x="430"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="431"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-26-6">
+
+          <rect
+            x="430"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="431"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-27-0">
+
+          <rect
+            x="445"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="446"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-27-1">
+
+          <rect
+            x="445"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="446"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-27-2">
+
+          <rect
+            x="445"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="446"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-27-3">
+
+          <rect
+            x="445"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="446"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-27-4">
+
+          <rect
+            x="445"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="446"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-27-5">
+
+          <rect
+            x="445"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="446"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-27-6">
+
+          <rect
+            x="445"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="446"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-28-0">
+
+          <rect
+            x="460"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="461"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-28-1">
+
+          <rect
+            x="460"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="461"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-28-2">
+
+          <rect
+            x="460"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="461"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-28-3">
+
+          <rect
+            x="460"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="461"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-28-4">
+
+          <rect
+            x="460"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="461"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-28-5">
+
+          <rect
+            x="460"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="461"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-28-6">
+
+          <rect
+            x="460"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="461"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-29-0">
+
+          <rect
+            x="475"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="476"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-29-1">
+
+          <rect
+            x="475"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="476"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-29-2">
+
+          <rect
+            x="475"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="476"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-29-3">
+
+          <rect
+            x="475"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="476"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-29-4">
+
+          <rect
+            x="475"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="476"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-29-5">
+
+          <rect
+            x="475"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="476"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-29-6">
+
+          <rect
+            x="475"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="476"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-30-0">
+
+          <rect
+            x="490"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="491"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-30-1">
+
+          <rect
+            x="490"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="491"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-30-2">
+
+          <rect
+            x="490"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="491"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-30-3">
+
+          <rect
+            x="490"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="491"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-30-4">
+
+          <rect
+            x="490"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="491"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-30-5">
+
+          <rect
+            x="490"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="491"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-30-6">
+
+          <rect
+            x="490"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="491"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-31-0">
+
+          <rect
+            x="505"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="506"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-31-1">
+
+          <rect
+            x="505"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="506"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-31-2">
+
+          <rect
+            x="505"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="506"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-31-3">
+
+          <rect
+            x="505"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="506"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-31-4">
+
+          <rect
+            x="505"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="506"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-31-5">
+
+          <rect
+            x="505"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="506"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-31-6">
+
+          <rect
+            x="505"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="506"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-32-0">
+
+          <rect
+            x="520"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="521"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-32-1">
+
+          <rect
+            x="520"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="521"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-32-2">
+
+          <rect
+            x="520"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="521"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-32-3">
+
+          <rect
+            x="520"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="521"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-32-4">
+
+          <rect
+            x="520"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="521"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-32-5">
+
+          <rect
+            x="520"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="521"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-32-6">
+
+          <rect
+            x="520"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="521"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-33-0">
+
+          <rect
+            x="535"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="536"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-33-1">
+
+          <rect
+            x="535"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="536"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-33-2">
+
+          <rect
+            x="535"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="536"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-33-3">
+
+          <rect
+            x="535"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="536"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-33-4">
+
+          <rect
+            x="535"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="536"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-33-5">
+
+          <rect
+            x="535"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="536"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-33-6">
+
+          <rect
+            x="535"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="536"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-34-0">
+
+          <rect
+            x="550"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="551"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-34-1">
+
+          <rect
+            x="550"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="551"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-34-2">
+
+          <rect
+            x="550"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="551"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-34-3">
+
+          <rect
+            x="550"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="551"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-34-4">
+
+          <rect
+            x="550"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="551"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-34-5">
+
+          <rect
+            x="550"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="551"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-34-6">
+
+          <rect
+            x="550"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="551"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-35-0">
+
+          <rect
+            x="565"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="566"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-35-1">
+
+          <rect
+            x="565"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="566"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-35-2">
+
+          <rect
+            x="565"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="566"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-35-3">
+
+          <rect
+            x="565"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="566"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-35-4">
+
+          <rect
+            x="565"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="566"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-35-5">
+
+          <rect
+            x="565"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="566"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-35-6">
+
+          <rect
+            x="565"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="566"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-36-0">
+
+          <rect
+            x="580"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="581"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-36-1">
+
+          <rect
+            x="580"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="581"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-36-2">
+
+          <rect
+            x="580"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="581"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-36-3">
+
+          <rect
+            x="580"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="581"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-36-4">
+
+          <rect
+            x="580"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="581"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-36-5">
+
+          <rect
+            x="580"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="581"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-36-6">
+
+          <rect
+            x="580"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="581"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-37-0">
+
+          <rect
+            x="595"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="596"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-37-1">
+
+          <rect
+            x="595"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="596"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-37-2">
+
+          <rect
+            x="595"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="596"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-37-3">
+
+          <rect
+            x="595"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="596"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-37-4">
+
+          <rect
+            x="595"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="596"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-37-5">
+
+          <rect
+            x="595"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="596"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-37-6">
+
+          <rect
+            x="595"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="596"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-38-0">
+
+          <rect
+            x="610"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="611"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-38-1">
+
+          <rect
+            x="610"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="611"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-38-2">
+
+          <rect
+            x="610"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="611"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-38-3">
+
+          <rect
+            x="610"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="611"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-38-4">
+
+          <rect
+            x="610"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="611"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-38-5">
+
+          <rect
+            x="610"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="611"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-38-6">
+
+          <rect
+            x="610"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="611"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-39-0">
+
+          <rect
+            x="625"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="626"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-39-1">
+
+          <rect
+            x="625"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="626"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-39-2">
+
+          <rect
+            x="625"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="626"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-39-3">
+
+          <rect
+            x="625"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="626"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-39-4">
+
+          <rect
+            x="625"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="626"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-39-5">
+
+          <rect
+            x="625"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="626"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-39-6">
+
+          <rect
+            x="625"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="626"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-40-0">
+
+          <rect
+            x="640"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="641"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-40-1">
+
+          <rect
+            x="640"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="641"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-40-2">
+
+          <rect
+            x="640"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="641"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-40-3">
+
+          <rect
+            x="640"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="641"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-40-4">
+
+          <rect
+            x="640"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="641"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-40-5">
+
+          <rect
+            x="640"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="641"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-40-6">
+
+          <rect
+            x="640"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="641"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-41-0">
+
+          <rect
+            x="655"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="656"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-41-1">
+
+          <rect
+            x="655"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="656"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-41-2">
+
+          <rect
+            x="655"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="656"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-41-3">
+
+          <rect
+            x="655"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="656"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-41-4">
+
+          <rect
+            x="655"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="656"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-41-5">
+
+          <rect
+            x="655"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="656"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-41-6">
+
+          <rect
+            x="655"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="656"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-42-0">
+
+          <rect
+            x="670"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="671"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-42-1">
+
+          <rect
+            x="670"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="671"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-42-2">
+
+          <rect
+            x="670"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="671"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-42-3">
+
+          <rect
+            x="670"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="671"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-42-4">
+
+          <rect
+            x="670"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="671"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-42-5">
+
+          <rect
+            x="670"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="671"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-42-6">
+
+          <rect
+            x="670"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="671"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-43-0">
+
+          <rect
+            x="685"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="686"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-43-1">
+
+          <rect
+            x="685"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="686"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-43-2">
+
+          <rect
+            x="685"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="686"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-43-3">
+
+          <rect
+            x="685"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="686"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-43-4">
+
+          <rect
+            x="685"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="686"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-43-5">
+
+          <rect
+            x="685"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="686"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-43-6">
+
+          <rect
+            x="685"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="686"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-44-0">
+
+          <rect
+            x="700"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="701"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-44-1">
+
+          <rect
+            x="700"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="701"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-44-2">
+
+          <rect
+            x="700"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="701"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-44-3">
+
+          <rect
+            x="700"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="701"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-44-4">
+
+          <rect
+            x="700"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="701"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-44-5">
+
+          <rect
+            x="700"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="701"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-44-6">
+
+          <rect
+            x="700"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="701"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-45-0">
+
+          <rect
+            x="715"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="716"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-45-1">
+
+          <rect
+            x="715"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#216e39"
+          />
+
+          <rect
+            x="716"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-45-2">
+
+          <rect
+            x="715"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="716"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-45-3">
+
+          <rect
+            x="715"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#30a14e"
+          />
+
+          <rect
+            x="716"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-45-4">
+
+          <rect
+            x="715"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#9be9a8"
+          />
+
+          <rect
+            x="716"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-45-5">
+
+          <rect
+            x="715"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="716"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-45-6">
+
+          <rect
+            x="715"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#30a14e"
+          />
+
+          <rect
+            x="716"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-46-0">
+
+          <rect
+            x="730"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#40c463"
+          />
+
+          <rect
+            x="731"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-46-1">
+
+          <rect
+            x="730"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="731"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-46-2">
+
+          <rect
+            x="730"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="731"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-46-3">
+
+          <rect
+            x="730"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#216e39"
+          />
+
+          <rect
+            x="731"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-46-4">
+
+          <rect
+            x="730"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#30a14e"
+          />
+
+          <rect
+            x="731"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-46-5">
+
+          <rect
+            x="730"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#9be9a8"
+          />
+
+          <rect
+            x="731"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-46-6">
+
+          <rect
+            x="730"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="731"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-47-0">
+
+          <rect
+            x="745"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="746"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-47-1">
+
+          <rect
+            x="745"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="746"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-47-2">
+
+          <rect
+            x="745"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="746"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-47-3">
+
+          <rect
+            x="745"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="746"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-47-4">
+
+          <rect
+            x="745"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="746"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-47-5">
+
+          <rect
+            x="745"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="746"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-47-6">
+
+          <rect
+            x="745"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#9be9a8"
+          />
+
+          <rect
+            x="746"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-48-0">
+
+          <rect
+            x="760"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#40c463"
+          />
+
+          <rect
+            x="761"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-48-1">
+
+          <rect
+            x="760"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="761"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-48-2">
+
+          <rect
+            x="760"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="761"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-48-3">
+
+          <rect
+            x="760"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#40c463"
+          />
+
+          <rect
+            x="761"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-48-4">
+
+          <rect
+            x="760"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="761"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-48-5">
+
+          <rect
+            x="760"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#216e39"
+          />
+
+          <rect
+            x="761"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-48-6">
+
+          <rect
+            x="760"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="761"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-49-0">
+
+          <rect
+            x="775"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#9be9a8"
+          />
+
+          <rect
+            x="776"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-49-1">
+
+          <rect
+            x="775"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="776"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-49-2">
+
+          <rect
+            x="775"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#9be9a8"
+          />
+
+          <rect
+            x="776"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-49-3">
+
+          <rect
+            x="775"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#30a14e"
+          />
+
+          <rect
+            x="776"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-49-4">
+
+          <rect
+            x="775"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="776"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-49-5">
+
+          <rect
+            x="775"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#40c463"
+          />
+
+          <rect
+            x="776"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-49-6">
+
+          <rect
+            x="775"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="776"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-50-0">
+
+          <rect
+            x="790"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#9be9a8"
+          />
+
+          <rect
+            x="791"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-50-1">
+
+          <rect
+            x="790"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="791"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-50-2">
+
+          <rect
+            x="790"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="791"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-50-3">
+
+          <rect
+            x="790"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="791"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-50-4">
+
+          <rect
+            x="790"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="791"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-50-5">
+
+          <rect
+            x="790"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#40c463"
+          />
+
+          <rect
+            x="791"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-50-6">
+
+          <rect
+            x="790"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#30a14e"
+          />
+
+          <rect
+            x="791"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-51-0">
+
+          <rect
+            x="805"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="806"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-51-1">
+
+          <rect
+            x="805"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="806"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-51-2">
+
+          <rect
+            x="805"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#216e39"
+          />
+
+          <rect
+            x="806"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-51-3">
+
+          <rect
+            x="805"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="806"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-51-4">
+
+          <rect
+            x="805"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="806"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-51-5">
+
+          <rect
+            x="805"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="806"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-51-6">
+
+          <rect
+            x="805"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#40c463"
+          />
+
+          <rect
+            x="806"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-52-0">
+
+          <rect
+            x="820"
+            y="50"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#40c463"
+          />
+
+          <rect
+            x="821"
+            y="51"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-52-1">
+
+          <rect
+            x="820"
+            y="65"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="821"
+            y="66"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-52-2">
+
+          <rect
+            x="820"
+            y="80"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="821"
+            y="81"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-52-3">
+
+          <rect
+            x="820"
+            y="95"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="821"
+            y="96"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-52-4">
+
+          <rect
+            x="820"
+            y="110"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="821"
+            y="111"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-52-5">
+
+          <rect
+            x="820"
+            y="125"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="821"
+            y="126"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+        <g id="brick-52-6">
+
+          <rect
+            x="820"
+            y="140"
+            width="12"
+            height="12"
+            rx="3"
+            fill="#ebedf0"
+          />
+
+          <rect
+            x="821"
+            y="141"
+            width="10"
+            height="2"
+            rx="1"
+            fill="#ffffff"
+            opacity=".10"
+          />
+
+        </g>
+      
+  </g>
+
+  <!-- hit effects -->
+
+  <g>
+    
+        <g>
+
+          <circle
+            cx="721"
+            cy="71"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="0s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="0s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="721"
+            cy="101"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="0.19s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="0.19s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="721"
+            cy="116"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="0.38s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="0.38s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="721"
+            cy="146"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="0.5700000000000001s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="0.5700000000000001s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="736"
+            cy="56"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="0.76s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="0.76s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="736"
+            cy="101"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="0.95s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="0.95s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="736"
+            cy="116"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="1.1400000000000001s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="1.1400000000000001s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="736"
+            cy="131"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="1.33s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="1.33s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="751"
+            cy="146"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="1.52s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="1.52s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="766"
+            cy="56"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="1.71s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="1.71s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="766"
+            cy="101"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="1.9s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="1.9s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="766"
+            cy="131"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="2.09s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="2.09s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="781"
+            cy="56"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="2.2800000000000002s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="2.2800000000000002s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="781"
+            cy="86"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="2.47s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="2.47s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="781"
+            cy="101"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="2.66s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="2.66s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="781"
+            cy="131"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="2.85s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="2.85s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="796"
+            cy="56"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="3.04s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="3.04s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="796"
+            cy="131"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="3.23s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="3.23s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="796"
+            cy="146"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="3.42s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="3.42s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="811"
+            cy="86"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="3.61s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="3.61s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="811"
+            cy="146"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="3.8s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="3.8s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+        <g>
+
+          <circle
+            cx="826"
+            cy="56"
+            r="2"
+            fill="#216e39"
+            opacity="0"
+          >
+
+            <animate
+              attributeName="r"
+              values="2;10;2"
+              begin="3.99s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+            <animate
+              attributeName="opacity"
+              values="0;.8;0"
+              begin="3.99s"
+              dur=".55s"
+              repeatCount="indefinite"
+            />
+
+          </circle>
+
+        </g>
+      
+  </g>
+
+  <!-- particles -->
+
+  <g>
+    
+      <circle
+        cx="70"
+        cy="65"
+        r="1"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="65;53;65"
+          dur="1.5s"
+          begin="0s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="1.5s"
+          begin="0s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="153"
+        cy="112"
+        r="2"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="112;100;112"
+          dur="1.9s"
+          begin="0.31s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="1.9s"
+          begin="0.31s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="236"
+        cy="84"
+        r="1"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="84;72;84"
+          dur="2.3s"
+          begin="0.62s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="2.3s"
+          begin="0.62s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="319"
+        cy="131"
+        r="2"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="131;119;131"
+          dur="2.7s"
+          begin="0.9299999999999999s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="2.7s"
+          begin="0.9299999999999999s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="402"
+        cy="103"
+        r="1"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="103;91;103"
+          dur="1.5s"
+          begin="1.24s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="1.5s"
+          begin="1.24s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="485"
+        cy="75"
+        r="2"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="75;63;75"
+          dur="1.9s"
+          begin="1.55s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="1.9s"
+          begin="1.55s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="568"
+        cy="122"
+        r="1"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="122;110;122"
+          dur="2.3s"
+          begin="1.8599999999999999s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="2.3s"
+          begin="1.8599999999999999s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="651"
+        cy="94"
+        r="2"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="94;82;94"
+          dur="2.7s"
+          begin="2.17s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="2.7s"
+          begin="2.17s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="734"
+        cy="66"
+        r="1"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="66;54;66"
+          dur="1.5s"
+          begin="2.48s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="1.5s"
+          begin="2.48s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="82"
+        cy="113"
+        r="2"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="113;101;113"
+          dur="1.9s"
+          begin="2.79s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="1.9s"
+          begin="2.79s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="165"
+        cy="85"
+        r="1"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="85;73;85"
+          dur="2.3s"
+          begin="3.1s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="2.3s"
+          begin="3.1s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="248"
+        cy="132"
+        r="2"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="132;120;132"
+          dur="2.7s"
+          begin="3.41s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="2.7s"
+          begin="3.41s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="331"
+        cy="104"
+        r="1"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="104;92;104"
+          dur="1.5s"
+          begin="3.7199999999999998s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="1.5s"
+          begin="3.7199999999999998s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="414"
+        cy="76"
+        r="2"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="76;64;76"
+          dur="1.9s"
+          begin="0.03000000000000025s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="1.9s"
+          begin="0.03000000000000025s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="497"
+        cy="123"
+        r="1"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="123;111;123"
+          dur="2.3s"
+          begin="0.33999999999999986s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="2.3s"
+          begin="0.33999999999999986s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="580"
+        cy="95"
+        r="2"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="95;83;95"
+          dur="2.7s"
+          begin="0.6500000000000004s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="2.7s"
+          begin="0.6500000000000004s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="663"
+        cy="67"
+        r="1"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="67;55;67"
+          dur="1.5s"
+          begin="0.96s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="1.5s"
+          begin="0.96s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="746"
+        cy="114"
+        r="2"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="114;102;114"
+          dur="1.9s"
+          begin="1.2699999999999996s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="1.9s"
+          begin="1.2699999999999996s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="94"
+        cy="86"
+        r="1"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="86;74;86"
+          dur="2.3s"
+          begin="1.58s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="2.3s"
+          begin="1.58s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="177"
+        cy="133"
+        r="2"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="133;121;133"
+          dur="2.7s"
+          begin="1.8899999999999997s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="2.7s"
+          begin="1.8899999999999997s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="260"
+        cy="105"
+        r="1"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="105;93;105"
+          dur="1.5s"
+          begin="2.2s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="1.5s"
+          begin="2.2s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+      <circle
+        cx="343"
+        cy="77"
+        r="2"
+        fill="#216e39"
+        opacity="0"
+      >
+
+        <animate
+          attributeName="cy"
+          values="77;65;77"
+          dur="1.9s"
+          begin="2.51s"
+          repeatCount="indefinite"
+        />
+
+        <animate
+          attributeName="opacity"
+          values="0;.55;0"
+          dur="1.9s"
+          begin="2.51s"
+          repeatCount="indefinite"
+        />
+
+      </circle>
+    
+  </g>
+
+  
+    <rect
+      x="35"
+      y="45"
+      width="805"
+      height="115"
+      rx="7"
+      fill="none"
+      stroke="#216e39"
+      stroke-width="1"
+      opacity=".12"
+    >
+
+      <animate
+        attributeName="opacity"
+        values=".04;.30;.04"
+        dur="3s"
+        repeatCount="indefinite"
+      />
+
+    </rect>
+  
+
+  <!-- paddle -->
+
+  <g>
+    
+    <rect
+      x="408.5"
+      y="173"
+      width="58"
+      height="7"
+      rx="3.5"
+      fill="#24292f"
+    >
+
+      <animate
+        attributeName="x"
+        values="
+          408.5;
+          777;
+          40;
+          408.5
+        "
+        dur="7s"
+        repeatCount="indefinite"
+      />
+
+    </rect>
+  
+  </g>
+
+  <!-- ball -->
+
+  
+    <g>
+
+      <!-- glow -->
+
+      <circle
+        r="10"
+        fill="#216e39"
+        opacity=".14"
+        filter="url(#blur)"
+      >
+
+        <animateMotion
+          dur="7s"
+          repeatCount="indefinite"
+        >
+          <mpath
+            href="#ballPath"
+          />
+        </animateMotion>
+
+      </circle>
+
+      <!-- trail -->
+
+      <circle
+        r="5"
+        fill="#24292f"
+      >
+
+        <animateMotion
+          dur="7s"
+          repeatCount="indefinite"
+        >
+          <mpath
+            href="#ballPath"
+          />
+        </animateMotion>
+
+      </circle>
+
+      <!-- inner core -->
+
+      <circle
+        r="2"
+        fill="#216e39"
+      >
+
+        <animateMotion
+          dur="7s"
+          repeatCount="indefinite"
+        >
+          <mpath
+            href="#ballPath"
+          />
+        </animateMotion>
+
+      </circle>
+
+    </g>
+  
+
+  <!-- bottom status -->
+
+  <text
+    x="437.5"
+    y="212"
+    text-anchor="middle"
+    font-family="monospace"
+    font-size="9"
+    fill="#8c959f"
+  >
+    CONTRIBUTION BREAKOUT · wlzbi-exe
+  </text>
+
+</svg>
