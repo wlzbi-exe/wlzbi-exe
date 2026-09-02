@@ -1,4 +1,4 @@
-name: Snake Contribution Graph
+name: Breakout Contribution Game
 
 on:
   push:
@@ -14,11 +14,11 @@ permissions:
   contents: write
 
 jobs:
-  snake:
+  breakout:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate Snake animation
+      - name: Generate animated Breakout
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: wlzbi-exe
@@ -37,6 +37,7 @@ jobs:
               user(login:$login) {
                 contributionsCollection {
                   contributionCalendar {
+                    totalContributions
                     weeks {
                       contributionDays {
                         contributionCount
@@ -54,44 +55,66 @@ jobs:
             return new Promise((resolve, reject) => {
               const body = JSON.stringify({
                 query: QUERY,
-                variables: { login: USERNAME }
+                variables: {
+                  login: USERNAME
+                }
               });
 
-              const req = https.request({
+              const request = https.request({
                 hostname: "api.github.com",
                 path: "/graphql",
                 method: "POST",
                 headers: {
-                  "User-Agent": "wlzbi-snake",
                   "Authorization": `Bearer ${TOKEN}`,
                   "Content-Type": "application/json",
+                  "User-Agent": "wlzbi-breakout",
                   "Content-Length": Buffer.byteLength(body)
                 }
-              }, res => {
+              }, response => {
+
                 let data = "";
 
-                res.on("data", c => data += c);
+                response.on(
+                  "data",
+                  chunk => data += chunk
+                );
 
-                res.on("end", () => {
-                  try {
-                    const json = JSON.parse(data);
+                response.on(
+                  "end",
+                  () => {
 
-                    if (json.errors) {
-                      reject(new Error(JSON.stringify(json.errors)));
-                      return;
+                    try {
+
+                      const json =
+                        JSON.parse(data);
+
+                      if (json.errors) {
+                        reject(
+                          new Error(
+                            JSON.stringify(json.errors)
+                          )
+                        );
+
+                        return;
+                      }
+
+                      resolve(json);
+
+                    } catch (error) {
+                      reject(error);
                     }
 
-                    resolve(json);
-                  } catch (e) {
-                    reject(e);
                   }
-                });
+                );
               });
 
-              req.on("error", reject);
+              request.on(
+                "error",
+                reject
+              );
 
-              req.write(body);
-              req.end();
+              request.write(body);
+              request.end();
             });
           }
 
@@ -103,118 +126,30 @@ jobs:
               .replace(/"/g, "&quot;");
           }
 
-          function buildBoard(calendar) {
-            const weeks = calendar.weeks;
-
-            const board = [];
-
-            let maximum = 0;
-
-            for (const week of weeks) {
-              for (const day of week.contributionDays) {
-                maximum = Math.max(
-                  maximum,
-                  day.contributionCount
-                );
-              }
-            }
-
-            for (let x = 0; x < weeks.length; x++) {
-              for (const day of weeks[x].contributionDays) {
-                let level = 0;
-
-                if (day.contributionCount > 0)
-                  level = 1;
-
-                if (
-                  maximum > 0 &&
-                  day.contributionCount >= maximum * 0.25
-                )
-                  level = 2;
-
-                if (
-                  maximum > 0 &&
-                  day.contributionCount >= maximum * 0.50
-                )
-                  level = 3;
-
-                if (
-                  maximum > 0 &&
-                  day.contributionCount >= maximum * 0.75
-                )
-                  level = 4;
-
-                board.push({
-                  x,
-                  y: day.weekday,
-                  level,
-                  count: day.contributionCount,
-                  date: day.date
-                });
-              }
-            }
-
-            return {
-              weeks,
-              cells: board
-            };
-          }
-
-          /*
-           * Deterministic pseudo-random generator.
-           *
-           * This means the animation is stable for the same
-           * contribution calendar, but still feels random.
-           */
-          function RNG(seed) {
-            let value = seed >>> 0;
-
-            return () => {
-              value += 0x6D2B79F5;
-
-              let t = value;
-
-              t = Math.imul(
-                t ^ (t >>> 15),
-                t | 1
-              );
-
-              t ^= t + Math.imul(
-                t ^ (t >>> 7),
-                t | 61
-              );
-
-              return (
-                ((t ^ (t >>> 14)) >>> 0)
-                / 4294967296
-              );
-            };
-          }
-
-          function generateGame(calendar, dark) {
-
-            const random = RNG(
-              USERNAME.length * 7919 +
-              calendar.weeks.length * 104729
-            );
+          function generate(calendar, dark) {
 
             const CELL = 12;
             const GAP = 3;
             const STEP = CELL + GAP;
 
-            const cols = calendar.weeks.length;
+            const weeks =
+              calendar.weeks;
+
+            const cols =
+              weeks.length;
+
             const rows = 7;
 
-            const width =
-              cols * STEP + 60;
+            const WIDTH =
+              cols * STEP + 80;
 
-            const height =
-              rows * STEP + 80;
+            const HEIGHT =
+              rows * STEP + 120;
 
-            const ox = 30;
-            const oy = 38;
+            const OX = 40;
+            const OY = 50;
 
-            const colors = dark
+            const palette = dark
               ? [
                   "#161b22",
                   "#0e4429",
@@ -230,467 +165,251 @@ jobs:
                   "#216e39"
                 ];
 
-            const cellMap = new Map();
+            let maximum = 1;
 
-            for (const cell of calendar.cells) {
-              cellMap.set(
-                `${cell.x}:${cell.y}`,
-                cell
-              );
+            for (const week of weeks) {
+
+              for (
+                const day
+                of week.contributionDays
+              ) {
+
+                maximum =
+                  Math.max(
+                    maximum,
+                    day.contributionCount
+                  );
+              }
             }
 
             /*
-             * Background contribution cells.
+             * BACKGROUND CONTRIBUTION GRID
              */
-            let background = "";
 
-            for (let x = 0; x < cols; x++) {
-              for (let y = 0; y < rows; y++) {
+            let bricks = "";
 
-                const cell =
-                  cellMap.get(`${x}:${y}`);
+            const brickData = [];
 
-                const level =
-                  cell ? cell.level : 0;
+            for (
+              let x = 0;
+              x < cols;
+              x++
+            ) {
+
+              for (
+                let y = 0;
+                y < rows;
+                y++
+              ) {
+
+                const day =
+                  weeks[x]
+                    .contributionDays
+                    .find(
+                      d =>
+                        d.weekday === y
+                    );
+
+                const count =
+                  day
+                    ? day.contributionCount
+                    : 0;
+
+                let level = 0;
+
+                if (count > 0)
+                  level = 1;
+
+                if (
+                  count >=
+                  maximum * .25
+                )
+                  level = 2;
+
+                if (
+                  count >=
+                  maximum * .50
+                )
+                  level = 3;
+
+                if (
+                  count >=
+                  maximum * .75
+                )
+                  level = 4;
 
                 const px =
-                  ox + x * STEP;
+                  OX + x * STEP;
 
                 const py =
-                  oy + y * STEP;
+                  OY + y * STEP;
 
-                background += `
-                  <rect
-                    x="${px}"
-                    y="${py}"
-                    width="${CELL}"
-                    height="${CELL}"
-                    rx="3"
-                    fill="${colors[level]}"
-                  />
+                const id =
+                  `brick-${x}-${y}`;
+
+                brickData.push({
+                  id,
+                  x: px,
+                  y: py,
+                  level,
+                  count
+                });
+
+                /*
+                 * Brick glow.
+                 */
+
+                bricks += `
+                  <g id="${id}">
+
+                    <rect
+                      x="${px}"
+                      y="${py}"
+                      width="${CELL}"
+                      height="${CELL}"
+                      rx="3"
+                      fill="${palette[level]}"
+                    />
+
+                    <rect
+                      x="${px + 1}"
+                      y="${py + 1}"
+                      width="${CELL - 2}"
+                      height="2"
+                      rx="1"
+                      fill="#ffffff"
+                      opacity=".10"
+                    />
+
+                  </g>
                 `;
               }
             }
 
             /*
-             * Create several independent gameplay runs.
-             *
-             * Each run has:
-             *
-             * MOVE
-             * EAT
-             * GROW
-             * TURN
-             * SELF COLLISION
-             * DEATH
-             * RESPAWN
+             * GAME AREA
              */
-            const RUNS = 4;
 
-            const totalDuration = 48;
+            const gameLeft = OX;
 
-            let defs = "";
-            let gameplay = "";
+            const gameRight =
+              OX + cols * STEP;
 
-            for (let run = 0; run < RUNS; run++) {
+            const gameTop =
+              OY;
 
-              const startX =
-                2 +
-                Math.floor(
-                  random() * Math.max(1, cols - 5)
-                );
+            const gameBottom =
+              OY + rows * STEP;
 
-              const startY =
-                1 +
-                Math.floor(
-                  random() * 5
-                );
+            /*
+             * BALL PATH
+             *
+             * Several collision-looking segments
+             * make the animation feel like an actual
+             * breakout run.
+             */
 
-              let direction =
-                random() > 0.5
-                  ? 1
-                  : -1;
+            const ballX =
+              gameLeft +
+              (gameRight - gameLeft) * .57;
 
-              let snake = [];
+            const ballY =
+              gameTop +
+              (gameBottom - gameTop) * .42;
 
-              for (let i = 0; i < 7; i++) {
-                snake.push({
-                  x: startX - i * direction,
-                  y: startY
-                });
-              }
+            const ballPath = `
+              M ${ballX} ${ballY}
 
-              const foods = [];
+              L ${gameRight - 15} ${gameTop + 12}
 
-              /*
-               * Select contribution cells as food.
-               */
-              const candidates =
-                calendar.cells
-                  .filter(c => c.level > 0)
-                  .sort(
-                    (a, b) =>
-                      b.level - a.level
-                  );
+              L ${gameRight - 30} ${gameBottom - 12}
 
-              for (
-                let i = 0;
-                i < Math.min(10, candidates.length);
-                i++
-              ) {
-                foods.push(
-                  candidates[
-                    Math.floor(
-                      random() * candidates.length
-                    )
-                  ]
-                );
-              }
+              L ${gameLeft + 120} ${gameTop + 22}
 
-              /*
-               * Construct a believable path.
-               */
-              const moves = [];
+              L ${gameLeft + 15} ${gameBottom - 16}
 
-              let x = startX;
-              let y = startY;
+              L ${gameRight - 75} ${gameTop + 12}
 
-              let dirX = direction;
-              let dirY = 0;
+              L ${gameRight - 10} ${gameBottom - 25}
 
-              const STEPS = 42;
+              L ${gameLeft + 50} ${gameTop + 15}
 
-              for (let step = 0; step < STEPS; step++) {
+              L ${gameLeft + 15} ${gameBottom - 12}
 
-                /*
-                 * Occasionally turn.
-                 */
-                if (random() < 0.22) {
+              L ${gameRight - 15} ${gameTop + 20}
 
-                  if (dirX !== 0) {
-                    dirX = 0;
-                    dirY =
-                      random() > 0.5
-                        ? 1
-                        : -1;
-                  } else {
-                    dirY = 0;
-                    dirX =
-                      random() > 0.5
-                        ? 1
-                        : -1;
-                  }
-                }
+              L ${gameRight - 70} ${gameBottom - 10}
 
-                let nx = x + dirX;
-                let ny = y + dirY;
+              L ${gameLeft + 90} ${gameTop + 10}
 
-                /*
-                 * Bounce from board boundaries.
-                 */
-                if (
-                  nx < 0 ||
-                  nx >= cols
-                ) {
-                  dirX *= -1;
-                  dirY = 0;
-                  nx = x + dirX;
-                }
+              L ${gameLeft + 20} ${gameBottom - 15}
 
-                if (
-                  ny < 0 ||
-                  ny >= rows
-                ) {
-                  dirY *= -1;
-                  dirX = 0;
-                  ny = y + dirY;
-                }
+              L ${gameRight - 20} ${gameTop + 15}
 
-                x = nx;
-                y = ny;
+              L ${gameRight - 40} ${gameBottom - 10}
 
-                moves.push({ x, y });
-              }
+              L ${gameLeft + 50} ${gameTop + 15}
 
-              /*
-               * Force a self-bite near the end of the run.
-               */
-              const biteStart =
-                Math.max(
-                  12,
-                  moves.length - 8
-                );
+              L ${gameLeft + 15} ${gameBottom - 15}
 
-              if (snake.length > 5) {
+              L ${gameRight - 15} ${gameTop + 20}
 
-                for (
-                  let i = biteStart;
-                  i < moves.length;
-                  i++
-                ) {
-                  const target =
-                    snake[
-                      Math.min(
-                        snake.length - 1,
-                        i - biteStart + 2
-                      )
-                    ];
+              L ${gameRight - 60} ${gameBottom - 15}
 
-                  if (target) {
-                    moves[i] = {
-                      x: target.x,
-                      y: target.y
-                    };
-                  }
-                }
-              }
+              L ${gameLeft + 110} ${gameTop + 15}
 
-              const runStart =
-                run * (totalDuration / RUNS);
+              L ${gameLeft + 25} ${gameBottom - 20}
 
-              const runDuration =
-                totalDuration / RUNS;
+              L ${gameRight - 20} ${gameTop + 20}
+            `;
 
-              /*
-               * Snake animation path.
-               */
-              const headPoints = [];
+            /*
+             * Generate random-looking brick impact pulses.
+             */
 
-              for (const p of moves) {
+            let impacts = "";
 
-                headPoints.push(
-                  `${ox + p.x * STEP + CELL / 2},` +
-                  `${oy + p.y * STEP + CELL / 2}`
-                );
-              }
-
-              const pathData =
-                headPoints.length
-                  ? `M ${headPoints.join(" L ")}`
-                  : "M 0 0";
-
-              const snakeId =
-                `snake-${run}`;
-
-              defs += `
-                <path
-                  id="${snakeId}"
-                  d="${pathData}"
-                />
-              `;
-
-              /*
-               * Connected body.
-               *
-               * Every segment follows the SAME path with
-               * a progressively larger negative delay.
-               */
-              let body = "";
-
-              const SEGMENTS = 14;
-
-              for (
-                let segment = SEGMENTS - 1;
-                segment >= 0;
-                segment--
-              ) {
-
-                const radius =
-                  Math.max(
-                    3.2,
-                    6.8 - segment * 0.20
-                  );
+            brickData
+              .filter(b => b.level > 0)
+              .forEach((brick, i) => {
 
                 const delay =
-                  -(segment * 0.13);
+                  (i * 0.19) % 16;
 
-                body += `
-                  <circle
-                    r="${radius}"
-                    fill="${dark
-                      ? "#26a641"
-                      : "#238636"}"
-                    opacity="${Math.max(
-                      0.38,
-                      1 - segment * 0.045
-                    )}"
-                  >
-                    <animateMotion
-                      dur="${runDuration}s"
-                      begin="${runStart + delay}s"
-                      repeatCount="indefinite"
-                      rotate="auto"
-                    >
-                      <mpath href="#${snakeId}"/>
-                    </animateMotion>
-                  </circle>
-                `;
-              }
+                const cx =
+                  brick.x + CELL / 2;
 
-              /*
-               * Head.
-               */
-              const head = `
-                <g>
+                const cy =
+                  brick.y + CELL / 2;
 
-                  <circle
-                    r="7.2"
-                    fill="${dark
-                      ? "#39d353"
-                      : "#216e39"}"
-                    filter="url(#glow)"
-                  >
-                    <animateMotion
-                      dur="${runDuration}s"
-                      begin="${runStart}s"
-                      repeatCount="indefinite"
-                      rotate="auto"
-                    >
-                      <mpath href="#${snakeId}"/>
-                    </animateMotion>
-                  </circle>
-
-                  <!-- left eye -->
-
-                  <circle
-                    cx="-2.6"
-                    cy="-2.5"
-                    r="1.35"
-                    fill="white"
-                  >
-                    <animateMotion
-                      dur="${runDuration}s"
-                      begin="${runStart}s"
-                      repeatCount="indefinite"
-                      rotate="auto"
-                    >
-                      <mpath href="#${snakeId}"/>
-                    </animateMotion>
-                  </circle>
-
-                  <!-- right eye -->
-
-                  <circle
-                    cx="2.6"
-                    cy="-2.5"
-                    r="1.35"
-                    fill="white"
-                  >
-                    <animateMotion
-                      dur="${runDuration}s"
-                      begin="${runStart}s"
-                      repeatCount="indefinite"
-                      rotate="auto"
-                    >
-                      <mpath href="#${snakeId}"/>
-                    </animateMotion>
-                  </circle>
-
-                </g>
-              `;
-
-              /*
-               * Food.
-               *
-               * Food pulses and then shrinks when the Snake
-               * reaches its position.
-               */
-              let food = "";
-
-              foods.forEach((foodCell, foodIndex) => {
-
-                const fx =
-                  ox +
-                  foodCell.x * STEP +
-                  CELL / 2;
-
-                const fy =
-                  oy +
-                  foodCell.y * STEP +
-                  CELL / 2;
-
-                const eatTime =
-                  runStart +
-                  1.5 +
-                  foodIndex * 0.65;
-
-                food += `
+                impacts += `
                   <g>
 
                     <circle
-                      cx="${fx}"
-                      cy="${fy}"
-                      r="3.8"
-                      fill="${dark
-                        ? "#ff6b6b"
-                        : "#cf222e"}"
-                    >
-
-                      <animate
-                        attributeName="r"
-                        values="3;4.5;3"
-                        dur="1s"
-                        repeatCount="indefinite"
-                      />
-
-                      <animate
-                        attributeName="opacity"
-                        values="1;.45;1"
-                        dur="1s"
-                        repeatCount="indefinite"
-                      />
-
-                    </circle>
-
-                    <circle
-                      cx="${fx}"
-                      cy="${fy}"
-                      r="7"
-                      fill="none"
-                      stroke="${dark
-                        ? "#ff6b6b"
-                        : "#cf222e"}"
-                      opacity=".25"
-                    >
-
-                      <animate
-                        attributeName="r"
-                        values="4;9;4"
-                        dur="1.2s"
-                        repeatCount="indefinite"
-                      />
-
-                      <animate
-                        attributeName="opacity"
-                        values=".4;0;.4"
-                        dur="1.2s"
-                        repeatCount="indefinite"
-                      />
-
-                    </circle>
-
-                    <!-- bite effect -->
-
-                    <circle
-                      cx="${fx}"
-                      cy="${fy}"
+                      cx="${cx}"
+                      cy="${cy}"
                       r="2"
-                      fill="white"
+                      fill="${
+                        dark
+                          ? "#ffffff"
+                          : "#216e39"
+                      }"
+                      opacity="0"
                     >
 
                       <animate
                         attributeName="r"
-                        begin="${eatTime}s"
-                        dur=".35s"
-                        values="2;11;0"
+                        values="2;10;2"
+                        begin="${delay}s"
+                        dur=".55s"
                         repeatCount="indefinite"
                       />
 
                       <animate
                         attributeName="opacity"
-                        begin="${eatTime}s"
-                        dur=".35s"
-                        values="1;.8;0"
+                        values="0;.8;0"
+                        begin="${delay}s"
+                        dur=".55s"
                         repeatCount="indefinite"
                       />
 
@@ -700,108 +419,336 @@ jobs:
                 `;
               });
 
-              /*
-               * Death explosion.
-               */
-              const deathTime =
-                runStart +
-                runDuration -
-                1.7;
+            /*
+             * PARTICLES.
+             */
 
-              const deathX =
-                ox +
-                moves[moves.length - 1].x *
-                  STEP +
-                CELL / 2;
+            let particles = "";
 
-              const deathY =
-                oy +
-                moves[moves.length - 1].y *
-                  STEP +
-                CELL / 2;
+            for (
+              let i = 0;
+              i < 22;
+              i++
+            ) {
 
-              const explosion = `
-                <g>
+              const bx =
+                gameLeft +
+                30 +
+                (
+                  i * 83
+                ) %
+                Math.max(
+                  100,
+                  gameRight - gameLeft - 60
+                );
 
-                  <circle
-                    cx="${deathX}"
-                    cy="${deathY}"
-                    r="4"
-                    fill="${dark
-                      ? "#ff5555"
-                      : "#cf222e"}"
-                  >
+              const by =
+                gameTop +
+                15 +
+                (
+                  i * 47
+                ) %
+                Math.max(
+                  50,
+                  gameBottom - gameTop - 30
+                );
 
-                    <animate
-                      attributeName="r"
-                      begin="${deathTime}s"
-                      dur="1.2s"
-                      values="4;22;2"
-                      repeatCount="indefinite"
-                    />
+              particles += `
+                <circle
+                  cx="${bx}"
+                  cy="${by}"
+                  r="${1 + (i % 2)}"
+                  fill="${
+                    dark
+                      ? "#39d353"
+                      : "#216e39"
+                  }"
+                  opacity="0"
+                >
 
-                    <animate
-                      attributeName="opacity"
-                      begin="${deathTime}s"
-                      dur="1.2s"
-                      values="1;.25;0"
-                      repeatCount="indefinite"
-                    />
+                  <animate
+                    attributeName="cy"
+                    values="${by};${by - 12};${by}"
+                    dur="${
+                      1.5 +
+                      (i % 4) * .4
+                    }s"
+                    begin="${
+                      (i * .31) % 4
+                    }s"
+                    repeatCount="indefinite"
+                  />
 
-                  </circle>
+                  <animate
+                    attributeName="opacity"
+                    values="0;.55;0"
+                    dur="${
+                      1.5 +
+                      (i % 4) * .4
+                    }s"
+                    begin="${
+                      (i * .31) % 4
+                    }s"
+                    repeatCount="indefinite"
+                  />
 
-                  <text
-                    x="${deathX}"
-                    y="${deathY}"
-                    text-anchor="middle"
-                    font-size="10"
-                    font-family="sans-serif"
-                    font-weight="bold"
-                    fill="${dark
-                      ? "#ff6b6b"
-                      : "#cf222e"}"
-                    opacity="0"
-                  >
-                    💥
-                    <animate
-                      attributeName="opacity"
-                      begin="${deathTime}s"
-                      dur=".25s"
-                      values="0;1;0"
-                      repeatCount="indefinite"
-                    />
-                  </text>
-
-                </g>
-              `;
-
-              gameplay += `
-                <g>
-                  ${food}
-                  ${body}
-                  ${head}
-                  ${explosion}
-                </g>
+                </circle>
               `;
             }
+
+            /*
+             * PADDLE
+             *
+             * It follows the ball horizontally.
+             */
+
+            const paddleY =
+              gameBottom + 18;
+
+            const paddleWidth = 58;
+
+            const paddleX =
+              (gameLeft + gameRight) / 2 -
+              paddleWidth / 2;
+
+            const paddleAnimation = `
+              <rect
+                x="${paddleX}"
+                y="${paddleY}"
+                width="${paddleWidth}"
+                height="7"
+                rx="3.5"
+                fill="${
+                  dark
+                    ? "#f0f6fc"
+                    : "#24292f"
+                }"
+              >
+
+                <animate
+                  attributeName="x"
+                  values="
+                    ${paddleX};
+                    ${gameRight - paddleWidth};
+                    ${gameLeft};
+                    ${paddleX}
+                  "
+                  dur="7s"
+                  repeatCount="indefinite"
+                />
+
+              </rect>
+            `;
+
+            /*
+             * BALL
+             */
+
+            const ball = `
+              <g>
+
+                <!-- glow -->
+
+                <circle
+                  r="10"
+                  fill="${
+                    dark
+                      ? "#39d353"
+                      : "#216e39"
+                  }"
+                  opacity=".14"
+                  filter="url(#blur)"
+                >
+
+                  <animateMotion
+                    dur="7s"
+                    repeatCount="indefinite"
+                  >
+                    <mpath
+                      href="#ballPath"
+                    />
+                  </animateMotion>
+
+                </circle>
+
+                <!-- trail -->
+
+                <circle
+                  r="5"
+                  fill="${
+                    dark
+                      ? "#ffffff"
+                      : "#24292f"
+                  }"
+                >
+
+                  <animateMotion
+                    dur="7s"
+                    repeatCount="indefinite"
+                  >
+                    <mpath
+                      href="#ballPath"
+                    />
+                  </animateMotion>
+
+                </circle>
+
+                <!-- inner core -->
+
+                <circle
+                  r="2"
+                  fill="${
+                    dark
+                      ? "#39d353"
+                      : "#216e39"
+                  }"
+                >
+
+                  <animateMotion
+                    dur="7s"
+                    repeatCount="indefinite"
+                  >
+                    <mpath
+                      href="#ballPath"
+                    />
+                  </animateMotion>
+
+                </circle>
+
+              </g>
+            `;
+
+            /*
+             * SCORE.
+             */
+
+            const score = `
+              <text
+                x="${gameLeft}"
+                y="23"
+                font-family="monospace"
+                font-size="11"
+                font-weight="700"
+                fill="${
+                  dark
+                    ? "#8b949e"
+                    : "#57606a"
+                }"
+              >
+                SCORE
+              </text>
+
+              <text
+                x="${gameLeft + 43}"
+                y="23"
+                font-family="monospace"
+                font-size="11"
+                font-weight="700"
+                fill="${
+                  dark
+                    ? "#39d353"
+                    : "#216e39"
+                }"
+              >
+                <tspan>000</tspan>
+
+                <animate
+                  attributeName="opacity"
+                  values="1;.4;1"
+                  dur="1.2s"
+                  repeatCount="indefinite"
+                />
+              </text>
+            `;
+
+            /*
+             * LIVES.
+             */
+
+            const lives = `
+              <text
+                x="${gameRight - 100}"
+                y="23"
+                font-family="monospace"
+                font-size="11"
+                font-weight="700"
+                fill="${
+                  dark
+                    ? "#8b949e"
+                    : "#57606a"
+                }"
+              >
+                LIVES
+              </text>
+
+              <text
+                x="${gameRight - 55}"
+                y="23"
+                font-size="10"
+              >
+                ♥ ♥ ♥
+              </text>
+            `;
+
+            /*
+             * FLASHING IMPACT BORDER.
+             */
+
+            const border = `
+              <rect
+                x="${gameLeft - 5}"
+                y="${gameTop - 5}"
+                width="${
+                  gameRight -
+                  gameLeft +
+                  10
+                }"
+                height="${
+                  gameBottom -
+                  gameTop +
+                  10
+                }"
+                rx="7"
+                fill="none"
+                stroke="${
+                  dark
+                    ? "#39d353"
+                    : "#216e39"
+                }"
+                stroke-width="1"
+                opacity=".12"
+              >
+
+                <animate
+                  attributeName="opacity"
+                  values=".04;.30;.04"
+                  dur="3s"
+                  repeatCount="indefinite"
+                />
+
+              </rect>
+            `;
 
             return `<?xml version="1.0" encoding="UTF-8"?>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="${width}"
-            height="${height}"
-            viewBox="0 0 ${width} ${height}"
+            width="${WIDTH}"
+            height="${HEIGHT}"
+            viewBox="0 0 ${WIDTH} ${HEIGHT}"
             role="img"
-            aria-label="Animated Snake contribution graph for ${esc(USERNAME)}"
+            aria-label="Animated Breakout contribution graph for ${esc(USERNAME)}"
           >
 
             <defs>
 
-              ${defs}
+              <path
+                id="ballPath"
+                d="${ballPath}"
+              />
 
               <filter
-                id="glow"
+                id="blur"
                 x="-100%"
                 y="-100%"
                 width="300%"
@@ -809,53 +756,76 @@ jobs:
               >
 
                 <feGaussianBlur
-                  stdDeviation="2.2"
-                  result="blur"
+                  stdDeviation="3"
                 />
-
-                <feMerge>
-                  <feMergeNode in="blur"/>
-                  <feMergeNode in="SourceGraphic"/>
-                </feMerge>
 
               </filter>
 
             </defs>
 
+            <!-- background -->
+
             <rect
               width="100%"
               height="100%"
               rx="12"
-              fill="${dark
-                ? "#0d1117"
-                : "#ffffff"}"
+              fill="${
+                dark
+                  ? "#0d1117"
+                  : "#ffffff"
+              }"
             />
 
+            ${score}
+
+            ${lives}
+
+            <!-- contribution bricks -->
+
+            <g>
+              ${bricks}
+            </g>
+
+            <!-- hit effects -->
+
+            <g>
+              ${impacts}
+            </g>
+
+            <!-- particles -->
+
+            <g>
+              ${particles}
+            </g>
+
+            ${border}
+
+            <!-- paddle -->
+
+            <g>
+              ${paddleAnimation}
+            </g>
+
+            <!-- ball -->
+
+            ${ball}
+
+            <!-- bottom status -->
+
             <text
-              x="${width / 2}"
-              y="20"
+              x="${WIDTH / 2}"
+              y="${HEIGHT - 13}"
               text-anchor="middle"
-              font-family="sans-serif"
-              font-size="11"
-              font-weight="600"
-              fill="${dark
-                ? "#8b949e"
-                : "#57606a"}"
+              font-family="monospace"
+              font-size="9"
+              fill="${
+                dark
+                  ? "#484f58"
+                  : "#8c959f"
+              }"
             >
-              🐍 ${esc(USERNAME)} · contribution snake
+              CONTRIBUTION BREAKOUT · ${esc(USERNAME)}
             </text>
-
-            <!-- contribution grid -->
-
-            <g>
-              ${background}
-            </g>
-
-            <!-- gameplay -->
-
-            <g>
-              ${gameplay}
-            </g>
 
           </svg>`;
           }
@@ -863,38 +833,45 @@ jobs:
           (async () => {
 
             console.log(
-              `🐍 Generating Snake graph for @${USERNAME}`
+              `🎮 Generating Breakout for @${USERNAME}`
             );
 
-            const response = await github();
+            const result =
+              await github();
 
             const calendar =
-              response.data.user
+              result.data.user
                 .contributionsCollection
                 .contributionCalendar;
 
             fs.writeFileSync(
-              "dist/snake.svg",
-              generateGame(calendar, false)
+              "dist/breakout.svg",
+              generate(
+                calendar,
+                false
+              )
             );
 
             fs.writeFileSync(
-              "dist/snake-dark.svg",
-              generateGame(calendar, true)
+              "dist/breakout-dark.svg",
+              generate(
+                calendar,
+                true
+              )
             );
 
             console.log(
-              "✅ Generated snake.svg"
+              "✅ breakout.svg generated"
             );
 
             console.log(
-              "✅ Generated snake-dark.svg"
+              "✅ breakout-dark.svg generated"
             );
 
           })().catch(error => {
 
             console.error(
-              "❌ Snake generation failed:"
+              "❌ Generation failed"
             );
 
             console.error(error);
@@ -904,7 +881,7 @@ jobs:
 
           NODE
 
-      - name: Publish Snake SVGs
+      - name: Publish game
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
