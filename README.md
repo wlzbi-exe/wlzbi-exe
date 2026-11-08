@@ -32,7 +32,7 @@ class WLZBI:
 
 <p align="center">
 
-<img src="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/main/.github/workflows/Wlzbi.jpg"/>
+<img src="https://raw.githubusercontent.com/wlzbi-exe/wlzbi-exe/main/.github/workflows/Wlzbi-exe.jpg"/>
 
 </p>
 
